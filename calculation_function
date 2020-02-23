@@ -1,0 +1,49 @@
+#include<stdio.h>
+void sum(int, int);
+void difference(int,int);
+void product(int,int);
+int main(){
+	int num1,num2, choice;
+	while(choice>0)
+	{
+	printf("1: sum of two numbers\n");
+	printf("2: difference of two numbers\n");
+	printf("3: product of two numbers\n");
+	printf("<0: terminate the program\n");
+	printf("Select calculation:");
+	scanf("%d",&choice);
+	if(choice<0){
+		printf("Terminating the program...\n");
+	}
+	else if(choice==1){
+		printf("Enter the first number:");
+	scanf("%d",&num1);
+	printf("Enter the second number:");
+	scanf("%d",&num2);
+		sum(num1,num2);
+	}
+	else if(choice==2){
+		printf("Enter the first number:");
+	scanf("%d",&num1);
+	printf("Enter the second number:");
+	scanf("%d",&num2);
+		difference(num1,num2);
+	}
+	else if(choice==3){
+		printf("Enter the first number:");
+	scanf("%d",&num1);
+	printf("Enter the second number:");
+	scanf("%d",&num2);
+		product(num1,num2);
+	}
+	}
+}
+void sum(int a, int b){
+	printf("%d + %d = %d\n",a,b,a+b);
+}
+void difference(int a, int b){
+	printf("%d - %d = %d\n",a,b,a-b);
+}
+void product(int a, int b){
+	printf("%d * %d = %d\n",a,b,a*b);
+}

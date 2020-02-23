@@ -1,0 +1,25 @@
+#include <stdio.h>
+     
+      int main() 
+       {
+        char gender; 
+		  int age;
+       
+         printf("Are you male or female (m/f)?");
+         scanf("%c", &gender);
+		 printf("Enter your age:");
+		 scanf("%d", &age);
+  
+     if ((gender == 'm') && ((0 <= age)&&(age <= 55)))
+           printf("You are a man in your best years!");
+		  else if ((gender == 'm') && ((56 <= age)&&(age <= 100)))
+           printf("You are a wise man!");
+       else if ((gender == 'f') && ((0 <= age)&&(age <= 55)))
+           printf("You are a beauty!");	
+		else if ((gender == 'f') && ((56 <= age)&&(age <= 100)))
+           printf("You look young for your age!");
+      else
+           printf("An error occurred in the program!");
+  
+      return 0;
+   }

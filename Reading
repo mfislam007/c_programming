@@ -1,0 +1,21 @@
+#include <stdio.h> 
+  
+ int main()
+ { 
+   FILE *file_handle;
+   int number1, number2, number3, number4; 
+	 int sum=0;
+  
+   if((file_handle = fopen("numbers.s", "r")) == NULL) {
+     printf("File not found!"); return 0;
+   } else {
+     fscanf(file_handle, "%d %d %d %d ", &number1, &number2, &number3, &number4);  
+     fclose(file_handle);
+    
+     printf("Numbers found in the file numbers.s:\n%d, %d, %d and %d\n\n", number1, number2, number3, number4); 
+	   sum = number1 + number2 + number3 + number4;
+	   printf("Sum of the numbers: %d",sum);
+	   
+   } 
+   return 0;
+  }

@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    int firstNumber, secondNumber, sumOfTwoNumbers, diffOfTwoNumbers, proOfTwoNumbers;
+    
+    printf("Enter the first number: ");
+    scanf("%d", &firstNumber);
+	printf("Enter thesecond number: ");
+	 scanf("%d", &secondNumber);
+
+
+    sumOfTwoNumbers = firstNumber + secondNumber;
+	diffOfTwoNumbers = firstNumber - secondNumber;
+	proOfTwoNumbers = firstNumber * secondNumber;
+
+ 
+    printf("%d + %d = %d\n", firstNumber, secondNumber, sumOfTwoNumbers);
+	printf("%d - %d = %d\n", firstNumber, secondNumber, diffOfTwoNumbers);
+	printf("%d * %d = %d", firstNumber, secondNumber, proOfTwoNumbers);
+
+    return 0;
+}

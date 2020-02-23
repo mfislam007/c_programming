@@ -1,0 +1,68 @@
+  #include <stdio.h> 
+ int main()
+ {  
+   int mata[10][10]; 
+   int matb[10][10]; 	 
+   int sum[10][10]; 
+
+   int x, y; 
+
+FILE *read_file1;
+FILE *read_file2;	 
+FILE *write_file;
+
+  if((read_file1 = fopen("mata.txt", "r")) == NULL) {
+    printf("Failed to open file (mata.txt)."); 
+    return 0;
+  } 
+  else {
+    for(y = 0; y < 10; y++) { 
+      for(x = 0; x < 10; x++) {  
+		  fscanf(read_file1, "%d,", &mata[y][x]); 
+        
+      } 
+    } 
+  } 
+  
+     fclose(read_file1);
+	 
+	 if((read_file2 = fopen("matb.txt", "r")) == NULL) {
+    printf("Failed to open file (mata.txt)."); 
+    return 0;
+  } 
+  else {
+    for(y = 0; y < 10; y++) { 
+      for(x = 0; x < 10; x++) {  
+		  fscanf(read_file2, "%d,", &matb[y][x]); 
+       
+      } 
+    } 
+  } 
+  
+     fclose(read_file2);
+	 
+	 for(y = 0; y < 10; y++) { 
+      for(x = 0; x < 10; x++) { 
+		  sum[y][x] = mata[y][x] + matb[y][x];
+	  }
+	 }
+	 if((write_file = fopen("sum.usr", "w")) == NULL) {
+      printf("Failed to open file (squares.txt)."); 
+    } 
+    else {
+      for(y = 0; y < 10; y++) {  
+        for(x = 0; x < 10; x++) {  
+			 fprintf(write_file, "%d ", sum[y][x]);
+        
+        } 
+		  fprintf(write_file,"\n");
+      } 
+		printf("The sum of the matrices has been calculated into the file sum.usr.\n");
+    } 
+ 
+   fclose(write_file);
+	
+   return 0;
+	 
+	 
+ }

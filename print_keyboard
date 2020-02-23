@@ -1,0 +1,10 @@
+#include <stdio.h>
+/* This is fine program */
+int main(void){
+	int integer;
+	printf("Enter an integer:");
+	scanf("%d", &integer);
+	integer = integer*integer;
+	printf("The square of the number you entered is %d\n", integer);
+	return 0;
+}

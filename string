@@ -1,0 +1,26 @@
+#include<stdio.h> 
+       
+       int main()
+       {
+	
+		char first_name[16];
+		char last_name[21];
+		char file_name[13];
+		printf("The program saves your first and last name into a file.\n");
+		printf("Enter your first name:");
+		scanf("%s",&first_name[0]);
+		printf("Enter your last name:");
+		scanf("%s",&last_name[0]);
+		printf("File where you want to save your name:");
+		scanf("%s",&file_name[0]);			
+         FILE *file_handle;              
+         if((file_handle = fopen(file_name, "w")) == NULL) {
+           printf("File not found!"); return 0;
+       } else {
+          fprintf(file_handle, "%s %s \n", first_name, last_name); 
+          fclose(file_handle);
+        
+         printf("Successfully saved the data!\n");
+       }
+       return 0;
+      }

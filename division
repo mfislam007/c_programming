@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+/* This is fine program */
+int main(void){
+	
+  float f=0,e=0;
+  float a = 5.94573;
+	
+   printf("Enter an amount in FIM:");
+   scanf("%f", &f);
+   printf("\n");
+	
+   e = (f/a);
+
+   printf("FIM converted to euro: %.2f\n",e);
+   
+	
+   return 0;
+   
+}

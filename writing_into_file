@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	FILE *opening = fopen("hello.usr", "w");
+	
+	if(opening == NULL){ 
+           exit(1); 
+        }  
+        else {
+          fprintf(opening, "Hello world!\n"); 
+		   fclose(opening);
+			printf("Writing to the file was successful.\n");
+			printf("Closing the program.\n");
+        }
+}

@@ -1,0 +1,5 @@
+void change_number(int *x){
+	*x = *x + 3;
+	
+	printf("In the subroutine: x = %d \n ",*x);
+}

@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main()
+{
+	float grade, total=0 , avg;
+	printf("The program calculates the average of scores you enter.\n");
+	printf("End with a negative integer.\n");
+	int i=0;
+	do {
+		
+		printf("Enter score (4-10):");
+		scanf("%f",&grade);
+		if(grade >=4 && grade <=10){		    
+		total = total + grade;
+		i++;
+		}
+	}while(grade > 0);
+	printf("You entered %d scores.\n",i);
+	avg = total / i;
+	printf("Average score: %.2f\n",avg);
+		
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+/* This is fine program */
+int main(void){
+	
+  int integer;
+  float decimal_number;
+
+   printf("Enter an integer: ");
+   scanf("%d", &integer);
+
+   printf("Enter a decimal number: ");
+   scanf("%f", &decimal_number);
+   printf("\n");
+
+   printf("You entered the integer: %d\n",integer);
+   printf("You entered the decimal number, rounded to two decimal places: %.2f\n",decimal_number);
+
+   return 0;
+   
+}
