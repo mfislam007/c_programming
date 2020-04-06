@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+
+int main()
+{
+  
+ int i, j;
+
+printf("first number is :");
+
+scanf("%d", &i);
+
+printf("second number is :");
+
+scanf("%d", &j);
+
+if (i>j){
+   
+ printf ("the numbers are %d and %d",j,i);
+     
+    
+}
+else
+     printf ("%d, %d", i,j);
+
+      printf ("\n");
+     
+while(i>=j){
+      
+//printf ("%d\n",i);
+        
+--i;
+        
+if(i%5==0){
+            
+printf("%d\n",i);
+        
+}
+     
+}
+   
+    
+return 0;
+
+}

@@ -1,0 +1,6 @@
+Reading... please wait...
+    1    4    8
+   19    2    5
+    7    9    4
+    5
+sum = 64

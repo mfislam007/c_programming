@@ -1,0 +1,16 @@
+
+        for(k=0; k<=n; ++k){            // output coefficients
+            printf("%6d", coefficient(n,k));
+        }
+        puts(""); // make a new line
+    }   // end for
+}   // end main
+
+unsigned int coefficient(unsigned int n, unsigned int k){
+    return factorial(n)/(factorial(k)*factorial(n-k));
+}
+
+unsigned long long int factorial(unsigned int n){
+    return (n<=1)?1:(n*factorial(n-1));
+}
+

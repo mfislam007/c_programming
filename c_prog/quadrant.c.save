@@ -1,0 +1,23 @@
+// this program will take 2 integers as coordinates and display this
+// point on the screen
+#include <stdio.h>
+#define RED 31
+#define GREEN 32
+#define YELLOW 33
+#define BLUE 34
+
+int main(){
+	int x, y;
+	printf("five me x and y: ");
+	scanf("%d%d",&x, &y);
+
+	printf("\033[2J");// clear the screen
+	printf("\033[%d;%dH", 13-y, x+40);// display a dot at the coordianate
+    printf("%s\n","\u25CF");
+	printf("\033[%d;%dH", 13-y+1, x+40);// move one row down
+    printf("(%d,%d)\n", x, y);
+
+	getchar();
+	getchar();
+	return 0;
+}
